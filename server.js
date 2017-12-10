@@ -12,7 +12,4 @@ apiRoutes(app);
 htmlRoutes(app);
 
 
-
-
-
 app.listen(PORT);
