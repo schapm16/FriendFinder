@@ -4,6 +4,9 @@
 <head>
   <meta lang="en-us" charset="UFT8">
 
+  <!--JQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
   <!--Materialize CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -11,12 +14,45 @@
 </head>
 
 <body>
-  <div class="container z-depth-2">
-    <h2>Survey...</h2>
-    <div id = "getResults" class="btn">Get Results</div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2>Survey...</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s8 offset-s2">
+        
+        <p>This is Question1</p>
+        
+        <select>
+          <option value="" disabled selected>Make Your Choice</option>
+          <option value=5>5 (Strongly Agree)</option>
+          <option value=4>4</option>
+          <option value=3>3</option>
+          <option value=2>2</option>
+          <option value=1>1 (Strongly Disagree)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+        <div id="getResults" class="btn">Get Results</div>
+      </div>
+    </div>
   </div>
-  
-  
+
+
+  <script>
+    /* global $ */
+
+    // Initialize Materialize Dropdowns
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  </script>
 
 </body>
 
