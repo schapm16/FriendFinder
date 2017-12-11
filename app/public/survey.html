@@ -195,6 +195,7 @@
     // Initialize Materialize Dropdowns
     $(document).ready(function() {
       $('select').material_select();
+      $('.modal').modal();
     });
 
 
@@ -224,6 +225,9 @@
         url: '/api/friends',
         traditional: true,
         data: newPerson
+      }).done(function(data){
+        $('modal').modal('open');
+
       });
     });
   </script>
