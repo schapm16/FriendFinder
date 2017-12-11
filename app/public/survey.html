@@ -10,6 +10,7 @@
   <!--Materialize CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 </head>
 
@@ -22,18 +23,161 @@
     </div>
 
     <div class="row">
-      <div class="input-field col s8 offset-s2">
-        
-        <p>This is Question1</p>
-        
-        <select>
-          <option value="" disabled selected>Make Your Choice</option>
-          <option value=5>5 (Strongly Agree)</option>
-          <option value=4>4</option>
-          <option value=3>3</option>
-          <option value=2>2</option>
-          <option value=1>1 (Strongly Disagree)</option>
-        </select>
+      <div class="col s8 offset-s2">
+        <div class="input-field">
+          <input id="name" placeholder="name" type="text"></input>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="input-field">
+          <input id="photo" placeholder="Link to a photo" type="text"></input>
+        </div>
+      </div>
+    </div>
+
+    <div id="questions">
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 1: Pizza is one of the best foods.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 2: Time with my friends is more important than alone time.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 3: Music and other arts are a very important part of life.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 4: The purpose of life is arbitrary.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 5: I like to read.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 6: Math gets me excited.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 7: I am a dog person.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 8: Physical activity is one of my main priorities.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 9: I like to go to bed early and wake up early.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8 offset-s2">
+          <blockquote>QUESTION 10: International travel makes you a better version of yourself.</blockquote>
+          <select required>
+            <option value="" disabled selected>Make Your Choice</option>
+            <option value="5">5 (Strongly Agree)</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1 (Strongly Disagree)</option>
+          </select>
+        </div>
       </div>
     </div>
 
@@ -51,6 +195,36 @@
     // Initialize Materialize Dropdowns
     $(document).ready(function() {
       $('select').material_select();
+    });
+
+
+    $('#getResults').click(function() {
+      var name = $('#name').val().trim();
+      var photo = $('#photo').val().trim();
+      var answers = $('#questions select :selected');
+      var answerArr = [];
+      var newPerson;
+
+      for (var i = 0; i < answers.length; i++) {
+        answerArr.push(parseInt(answers.eq(i).val()));
+      }
+
+      console.log(answerArr);
+
+      newPerson = {
+        "name": name,
+        "photo": photo,
+        "scores": answerArr
+      };
+
+      console.log(newPerson);
+
+      $.ajax({
+        type: 'POST',
+        url: '/api/friends',
+        traditional: true,
+        data: newPerson
+      });
     });
   </script>
 
