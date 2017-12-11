@@ -22,6 +22,7 @@
       </div>
     </div>
 
+    <!--Survey Form Begins Here-->
     <div class="row">
       <div class="col s8 offset-s2">
         <div class="input-field">
@@ -188,17 +189,30 @@
     </div>
   </div>
 
+  <!--Survey Form Ends Here-->
+
+  <!--Modal to display resulting match-->
+  <div class="modal">
+    <div class="modal-content">
+      <img id="photo">
+      <h4>Your Match Is: <span id="matchName"></span></h4>
+    </div>
+  </div>
+
 
   <script>
     /* global $ */
 
-    // Initialize Materialize Dropdowns
+    // Initialize Materialize Dropdown and Modal
     $(document).ready(function() {
       $('select').material_select();
       $('.modal').modal();
     });
 
-
+    // The following code compiles the data on click of the Get Results button.
+    // The compiled data is put in the newPerson object and sent via POST to route
+    // /api/friends.  .done() receives the user's match data back and delivers it to the
+    // modal.
     $('#getResults').click(function() {
       var name = $('#name').val().trim();
       var photo = $('#photo').val().trim();
@@ -210,23 +224,21 @@
         answerArr.push(parseInt(answers.eq(i).val()));
       }
 
-      console.log(answerArr);
-
       newPerson = {
         "name": name,
         "photo": photo,
         "scores": answerArr
       };
 
-      console.log(newPerson);
-
       $.ajax({
         type: 'POST',
         url: '/api/friends',
         traditional: true,
         data: newPerson
-      }).done(function(data){
-        $('modal').modal('open');
+      }).done(function(data) {
+        $('.modal img').attr({'src': data.photo, 'alt': 'Photo of: ' + data.name});
+        $('.modal #matchName').text(data.name);
+        $('.modal').modal('open');
 
       });
     });
