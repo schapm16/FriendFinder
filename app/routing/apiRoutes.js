@@ -11,7 +11,6 @@ function apiRoutes(app) {
   });
   
   app.post('/api/friends', function(req, res) {
-    
     var match = logic(req.body);
     
     res.status(200).send(match);
