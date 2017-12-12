@@ -210,13 +210,19 @@
   <!--Survey Form Ends Here-->
 
   <!--Modal to display resulting match-->
-  <div class="modal">
-    <div class="modal-content">
+  <div id = "match" class="modal">
+    <div class="modal-content center-align">
       <img id="photo">
       <h4>Your Match Is: <span id="matchName"></span></h4>
     </div>
   </div>
-
+  
+   <!--Modal responding to user input error-->
+  <div id = "error" class="modal">
+    <div class="modal-content center-align">
+      <h4>Oops! Looks like you forgot something.</h4>
+    </div>
+  </div>
 
   <script>
     /* global $ */
@@ -237,8 +243,23 @@
       var answers = $('#questions select :selected');
       var answerArr = [];
       var newPerson;
-
+      
+      
+      // This if statement will display the error modal if the name or photo fields are empty
+      // and stop script execution
+      if (name === "" || photo === "") {
+        $('#error').modal('open');
+        return;
+      }
+      
       for (var i = 0; i < answers.length; i++) {
+        // This if statement will make sure each question has been answered and if not
+        // it will display the error modal and stop script execution
+        if (answers.eq(i).val() === "") {
+          $('#error').modal('open');
+          return;
+        }
+        
         answerArr.push(parseInt(answers.eq(i).val()));
       }
 
@@ -254,9 +275,9 @@
         traditional: true,
         data: newPerson
       }).done(function(data) {
-        $('.modal img').attr({'src': data.photo, 'alt': 'Photo of: ' + data.name});
-        $('.modal #matchName').text(data.name);
-        $('.modal').modal('open');
+        $('#match img').attr({'src': data.photo, 'alt': 'Photo of: ' + data.name});
+        $('#match #matchName').text(data.name);
+        $('#match').modal('open');
       });
     });
   </script>

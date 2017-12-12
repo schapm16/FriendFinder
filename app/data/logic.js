@@ -11,7 +11,7 @@ function logic(newPerson) {
     diff = 0;
 
     for (var j = 0; j < 10; j++) {
-      diff = diff + (Math.abs(friends[i]['scores'][j] - parseInt(newPerson.scores[j])));
+      diff = diff + (Math.abs(parseInt(friends[i]['scores'][j]) - parseInt(newPerson.scores[j])));
     }
 
     if (diff < bestMatch.diff) {
