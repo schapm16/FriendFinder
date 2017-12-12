@@ -1,6 +1,3 @@
-//Important npm modules
-var path = require('path');
-
 //Import data and logic module
 var friends = require('../data/friends.js');
 var logic = require('../data/logic.js'); //Used to find user's friend match

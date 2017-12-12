@@ -11,16 +11,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <style type="text/css">
+    body {
+      padding-top:33vh;
+    }
+    .content {
+      height: 33.33vh;
+      background-image: url('https://cdn.imaginuitycenters.com/wp-content/uploads/sites/108/2017/07/21151206/InfoBanner4.png');
+      background-size: cover;
+      padding-top: 1vh;
+      overflow: hidden;
+    }
+    h1 {
+      font-weight: bold;
+    }
+    
+  </style>
 
 </head>
 
 <body>
-  <div class="container center-align">
+  <div class="content center-align">
     <h1>Friend Finder</h1>
     <a id = "takeSurvey"  href="/survey" class="btn">Take Survey</a> 
     <br>
-    <a href="/api/friends">See all friends</a>
   </div>
+   <a href="/api/friends">API | All Possible Friends</a>
   
 </body>
 
